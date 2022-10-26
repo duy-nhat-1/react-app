@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { AiOutlineEdit } from 'react-icons/ai'
 import ReactTooltip from 'react-tooltip'
 import { AiFillDelete } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 const Main = () => {
     return (
         <div className='container'>
@@ -53,7 +54,7 @@ const Main = () => {
                                 <td>10</td>
                                 <td>
                                     <Edit data-tip data-for="registerTip_1">
-                                        <a href='#'><AiOutlineEdit /></a>
+                                    <Link to={'/admin/update'} ><AiOutlineEdit/></Link>
                                         <ReactTooltip id="registerTip_1" place="top" effect="solid">
                                             Edit
                                         </ReactTooltip>
@@ -76,7 +77,7 @@ const Main = () => {
                                 <td>10</td>
                                 <td>
                                     <Edit data-tip data-for="registerTip_1">
-                                        <a href='#'><AiOutlineEdit /></a>
+                                    <Link to={'/admin/update'} ><AiOutlineEdit/></Link>
                                         <ReactTooltip id="registerTip_1" place="top" effect="solid">
                                             Edit
                                         </ReactTooltip>
@@ -99,7 +100,7 @@ const Main = () => {
                                 <td>10</td>
                                 <td>
                                     <Edit data-tip data-for="registerTip_1">
-                                        <a href='#'><AiOutlineEdit /></a>
+                                      <Link to={'/admin/update'} ><AiOutlineEdit/></Link>
                                         <ReactTooltip id="registerTip_1" place="top" effect="solid">
                                             Edit
                                         </ReactTooltip>
@@ -122,7 +123,7 @@ const Main = () => {
                                 <td>10</td>
                                 <td>
                                     <Edit data-tip data-for="registerTip_1">
-                                        <a href='#'><AiOutlineEdit /></a>
+                                    <Link to={'/admin/update'} ><AiOutlineEdit/></Link>
                                         <ReactTooltip id="registerTip_1" place="top" effect="solid">
                                             Edit
                                         </ReactTooltip>
@@ -145,7 +146,8 @@ const Main = () => {
                                 <td>10</td>
                                 <td>
                                     <Edit data-tip data-for="registerTip_1">
-                                        <a href='#'><AiOutlineEdit /></a>
+                                    <Link to={'/admin/update'} ><AiOutlineEdit/></Link>
+                                        <Link></Link>
                                         <ReactTooltip id="registerTip_1" place="top" effect="solid">
                                             Edit
                                         </ReactTooltip>

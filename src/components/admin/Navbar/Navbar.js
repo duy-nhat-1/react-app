@@ -1,7 +1,13 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Navbar = () => {
+    const navLinkStyle = ({ isActive }) => ({
+        color: isActive ? "#fff" : "",
+        backgroundColor: isActive ? "#0d6efd" : ""
+
+    });
     return (
         <Container className='container-fluid justify-content-center align-items-center'>
 
@@ -9,23 +15,28 @@ const Navbar = () => {
                 <div className='col-10'>
 
                     <ul className="nav justify-content-around">
-                        <Img src='https://webdevproof.com/theme-forest-demo/job/demo-1-en/assets/images/logo/logo.png' />
+                        <LinkLogo to={'/admin/list'}><Img src='https://webdevproof.com/theme-forest-demo/job/demo-1-en/assets/images/logo/logo.png' /></LinkLogo>
+                        <Item className="nav-item">
+                            <NavLink to="/admin/list" className="nav-link" style={navLinkStyle}>
+                                Quản lí công việc
+                            </NavLink>
+                        </Item>
                         <Item className="nav-item " >
-                            <a className="nav-link active" aria-current="page" href="#">Đăng tin tuyển dụng</a>
+                            <NavLink to={"/admin/newjob"} className='nav-link' style={navLinkStyle}>Đăng tin tuyển dụng</NavLink>
                         </Item>
                         <Item className="nav-item">
-                            <a className="nav-link" href="#">Xem website tuyển dụng</a>
+                          <LinkTo href='/'>
+                                Xem website tuyển dụng
+                          </LinkTo>
                         </Item>
                         <Item className="nav-item">
-                            <a className="nav-link" href="#">Quản lí công việc</a>
+                            <NavLink to={'/admin/applicant'} className='nav-link' style={navLinkStyle}>Quản lí hồ sơ</NavLink>
                         </Item>
-                        <Item className="nav-item">
-                            <a className="nav-link" href="#">Quản lí hồ sơ</a>
-                        </Item>
+
                     </ul>
                 </div>
                 <div className='col-2'>
-                    <Avatar src='https://vnn-imgs-f.vgcloud.vn/2020/03/23/11/trend-avatar-1.jpg'/>
+                    <Avatar src='https://vnn-imgs-f.vgcloud.vn/2020/03/23/11/trend-avatar-1.jpg' />
                 </div>
             </div>
 
@@ -34,6 +45,12 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+const LinkLogo = styled(Link)`
+`
+const LinkTo = styled.a`
+    text-decoration: none;
+`
 
 const Container = styled.div`
     height: 101px;

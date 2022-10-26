@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { AiOutlineEdit } from 'react-icons/ai'
 import ReactTooltip from 'react-tooltip'
 import { AiFillDelete } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 const Applicant = () => {
     return (
         <div className='container'>
@@ -51,7 +52,7 @@ const Applicant = () => {
                                 <td>TP HCM</td>
                                 <td>
                                     <Edit data-tip data-for="registerTip_1">
-                                        <a href='#'><AiOutlineEdit /></a>
+                                       <Link to={'/admin/updateapplicant'}><AiOutlineEdit/></Link>
                                         <ReactTooltip id="registerTip_1" place="top" effect="solid">
                                             Edit
                                         </ReactTooltip>

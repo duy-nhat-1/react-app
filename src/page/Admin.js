@@ -14,7 +14,7 @@ const Admin = () => {
         <div>
             <Navbar />
             <Routes>
-                <Route exact path='/' element={<LisJob />} />
+                <Route  path='/list' element={<LisJob />} />
                 <Route path='/update' element={<UpdateJob/>} />
                 <Route exact path='/applicant' element={<Applicant />} />
                 <Route path='/updateapplicant' element={<UpdatApplicant />} />
