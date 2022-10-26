@@ -62,9 +62,11 @@ const Count_Job = styled.h1`
     color: #50feb8;
     font-weight: 500;
     line-height: 70px;
+    text-align: center;
     :after {
         content: ' Công việc';
         color: #ffffff;
+        text-align: center;
     }
 `
 
@@ -72,5 +74,6 @@ const Slogan = styled.h2`
     color: #ffffff;
     font-size: 24px;
     line-height: 100px;
+    text-align: center;
 
 `

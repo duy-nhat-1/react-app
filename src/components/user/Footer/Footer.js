@@ -118,4 +118,5 @@ const Container = styled.div`
 const Copyright = styled.p`
   color: #fff;
   line-height: 50px;
+  text-align:center
 `

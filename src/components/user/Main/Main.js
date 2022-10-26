@@ -15,7 +15,7 @@ const Main = () => {
                         </Title>
                     </div>
                     <div className='row justify-content-center'>
-                        <Item className='col-md-3'>
+                        <Item className='col-md-3 text-center'>
                             <h5>
                                 <NameCate>
                                     Design & Development
@@ -25,7 +25,7 @@ const Main = () => {
                                 (5665)
                             </Amount>
                         </Item>
-                        <Item className='col-md-3'>
+                        <Item className='col-md-3 text-center'>
                             <h5>
                                 <NameCate>
                                     Design & Development
@@ -36,29 +36,7 @@ const Main = () => {
                                 ( 5665)
                             </Amount>
                         </Item>
-                        <Item className='col-md-3'>
-                            <h5>
-                                <NameCate>
-                                    Design & Development
-                                </NameCate>
-
-                            </h5>
-                            <Amount>
-                                ( 5665)
-                            </Amount>
-                        </Item>
-                        <Item className='col-md-3'>
-                            <h5>
-                                <NameCate>
-                                    Design & Development
-                                </NameCate>
-
-                            </h5>
-                            <Amount>
-                                ( 5665 )
-                            </Amount>
-                        </Item>
-                        <Item className='col-md-3'>
+                        <Item className='col-md-3 text-center'>
                             <h5>
                                 <NameCate>
                                     Design & Development
@@ -291,7 +269,6 @@ const Amount = styled.span`
     color: #3c3c3c;
     font-size: 27px;
     line-height: 35px;
-    text-align: center;
 `
 const NameCate = styled.a`
     text-decoration: none;

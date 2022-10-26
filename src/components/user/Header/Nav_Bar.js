@@ -1,7 +1,7 @@
-
 import React, { useState } from "react";
 import styled from "styled-components";
-import Login from './Login'
+import { Link } from "react-router-dom";
+import "./style.css"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [color, setColor] = useState('none')
@@ -16,8 +16,8 @@ const Navbar = () => {
 
   window.addEventListener('scroll', changeColor)
   return (
-    <Nav style={{background:`${color}`}} >
-      <Logo href="">
+    <Nav style={{ background: `${color}` }} >
+      <Logo href="/">
         Eli<span>Codes</span>
       </Logo>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
@@ -26,10 +26,12 @@ const Navbar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink href="">Trang chủ</MenuLink>
-        <MenuLink href="">Công việc</MenuLink>
-        <MenuLink href="">Về chúng tôi</MenuLink>
-        <Login />
+        <MenuLink><Link to="/" className="nav_bar"> Trang chủ</Link></MenuLink>
+        <MenuLink><Link to="/job" className="nav_bar">Công việc</Link></MenuLink>
+        <MenuLink><Link to="#" className="nav_bar">Về chúng tôi</Link></MenuLink>
+        <Button>
+          <NavLink to={'/login'}>Login</NavLink>
+        </Button>
       </Menu>
     </Nav>
   );
@@ -37,7 +39,12 @@ const Navbar = () => {
 
 export default Navbar;
 
-const MenuLink = styled.a`
+const NavLink = styled(Link)`
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
+`
+const MenuLink = styled.p`
   padding: 1rem 2rem;
   cursor: pointer;
   text-align: center;
@@ -48,7 +55,20 @@ const MenuLink = styled.a`
   &:hover {
     color: #50feb8;
   }
+  
 `;
+const Button = styled.button`
+        font-size: 24px;
+        background: none;
+        border: 1px;
+        border-style: solid;
+        border-color: #00b6c3;
+        color: #fff;
+        border-radius: 5px;
+        margin: auto 25px;
+        align-items: center;
+        padding: 10px 25px;
+`
 
 const Nav = styled.div`
   padding: 0 2rem;

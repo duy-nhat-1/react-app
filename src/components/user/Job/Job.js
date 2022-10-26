@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { BsFillBriefcaseFill } from "react-icons/bs"
 import { BsCurrencyDollar } from 'react-icons/bs'
 import { BsPinMapFill } from 'react-icons/bs'
-
+import { Link } from 'react-router-dom'
+import './style.css'
 const Job = () => {
 
 
@@ -60,8 +61,9 @@ const Job = () => {
                             </div>
                             <div className='col-md-7'>
                                 <JobTitle>
-                                    <a >Làm gái</a>
+                                    <Link to={'/detail/:id'} className='job-title'>Làm gái</Link>
                                 </JobTitle>
+
                                 <Day>
                                     April 3, 2018
                                 </Day>
@@ -106,100 +108,9 @@ const Job = () => {
                             </div>
                             <div className='col-md-7'>
                                 <JobTitle>
-                                    <a >Làm gái</a>
+                                    <Link to={'/detail/:id'} className='job-title'>Làm gái</Link>
                                 </JobTitle>
-                                <Day>
-                                    April 3, 2018
-                                </Day>
-                                <ul>
-                                    <li>
-                                        <SpanIcon_1>
-                                            <BsFillBriefcaseFill />
-                                        </SpanIcon_1>
-                                        <SpanBody>
-                                            Intel Technologies
-                                        </SpanBody>
-                                    </li>
-                                    <li>
-                                        <SpanIcon_2>
-                                            <BsCurrencyDollar />
-                                        </SpanIcon_2>
-                                        <SpanBody>
-                                            2500-3000
-                                        </SpanBody>
-                                    </li>
-                                    <li>
-                                        <SpanIcon_3>
-                                            <BsPinMapFill />
-                                        </SpanIcon_3>
-                                        <SpanBody>
-                                            Viet Nam
-                                        </SpanBody>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </ContainerJob>
-                <ContainerJob className='col-xl-5'>
-                    <div className='container'>
-                        <div className='row justify-content-around'>
-                            <div className='col-md-3'>
-                                <Img src='https://webdevproof.com/theme-forest-demo/job/demo-1-en/assets/images/icons/12.png' />
-                                <Jobtype>
-                                    Full time
-                                </Jobtype>
-                            </div>
-                            <div className='col-md-7'>
-                                <JobTitle>
-                                    <a >Làm gái</a>
-                                </JobTitle>
-                                <Day>
-                                    April 3, 2018
-                                </Day>
-                                <ul>
-                                    <li>
-                                        <SpanIcon_1>
-                                            <BsFillBriefcaseFill />
-                                        </SpanIcon_1>
-                                        <SpanBody>
-                                            Intel Technologies
-                                        </SpanBody>
-                                    </li>
-                                    <li>
-                                        <SpanIcon_2>
-                                            <BsCurrencyDollar />
-                                        </SpanIcon_2>
-                                        <SpanBody>
-                                            2500-3000
-                                        </SpanBody>
-                                    </li>
-                                    <li>
-                                        <SpanIcon_3>
-                                            <BsPinMapFill />
-                                        </SpanIcon_3>
-                                        <SpanBody>
-                                            Viet Nam
-                                        </SpanBody>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </ContainerJob>
-                <ContainerJob className='col-xl-5'>
-                    <div className='container'>
-                        <div className='row justify-content-around'>
-                            <div className='col-md-3'>
-                                <Img src='https://webdevproof.com/theme-forest-demo/job/demo-1-en/assets/images/icons/12.png' />
-                                <Jobtype>
-                                    Full time
-                                </Jobtype>
-                            </div>
-                            <div className='col-md-7'>
-                                <JobTitle>
-                                    <a >Làm gái</a>
-                                </JobTitle>
+
                                 <Day>
                                     April 3, 2018
                                 </Day>
@@ -343,6 +254,7 @@ const JobTitle = styled.h3`
     &:hover {
         color: #50feb8;
     }
+    
 `
 const Day = styled.p`
     text-align: start;

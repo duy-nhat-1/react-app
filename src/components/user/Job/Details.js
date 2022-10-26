@@ -5,6 +5,7 @@ import { BsPinMapFill } from 'react-icons/bs'
 import { BsCurrencyDollar } from 'react-icons/bs'
 import { BsGridFill } from 'react-icons/bs'
 import { BsBookmarkFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 const Details = () => {
   return (
     <div className='container'>
@@ -22,7 +23,7 @@ const Details = () => {
                   </div>
                   <div className='col-md-7'>
                     <JobTitle>
-                      <a >Làm gái</a>
+                     Lam gai
                     </JobTitle>
                     <Day>
                       April 3, 2018
@@ -102,7 +103,7 @@ const Details = () => {
               </div>
               <div className='col-12'>
                   <ApplyButton>
-                      Apply 
+                   <LinkApply to={'/apply'}>Apply</LinkApply>
                   </ApplyButton>
               </div>
             </div>
@@ -114,6 +115,14 @@ const Details = () => {
 }
 
 export default Details
+
+const LinkApply = styled(Link)`
+  color: #ffffff;
+  text-decoration: none;
+  &:hover {
+    color: #ffffff;
+  }
+`
 
 const Jobtype = styled.span`
     font-size: 20px;
@@ -142,10 +151,6 @@ const JobTitle = styled.h3`
     font-size: 25px;
     text-decoration: none;
     text-transform: uppercase;
-    cursor: pointer;
-    &:hover {
-        color: #50feb8;
-    }
 `
 const Day = styled.p`
     text-align: start;
